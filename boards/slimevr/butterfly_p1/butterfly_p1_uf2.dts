@@ -46,15 +46,14 @@
 		zephyr,shell-uart = &cdc_acm_uart0;
 	};
 
-	nrf_radio_fem: nrf21540_fem {
-		compatible = "nordic,nrf21540-fem";
-		supply-voltage-mv = <3000>;
-		pdn-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
-		mode-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-		rx-en-gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
-		tx-en-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
-		// TRX (Transmit/Receive Select)
-		// trx-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
+	nrf_radio_fem: skyFem {
+	    compatible = "skyworks,sky66112-11", "generic-fem-two-ctrl-pins";
+	    ctx-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
+	    ctx-settle-time-us = <1>;
+	    crx-gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>;
+	    crx-settle-time-us = <1>;
+	    tx-gain-db = <22>;
+	    rx-gain-db = <12>;
 	};
 
 	pwmleds {
