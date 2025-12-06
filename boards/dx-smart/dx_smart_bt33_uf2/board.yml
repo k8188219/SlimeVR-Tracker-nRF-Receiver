@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 board:
-  name: dx-smart-bt33-uf2
+  name: dx_smart_bt33_uf2
   vendor: dx-smart
   socs:
     - name: nrf52833
