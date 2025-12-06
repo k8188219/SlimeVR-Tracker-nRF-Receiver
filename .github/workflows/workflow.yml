@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         boards: [
-                  {boardname: "butterfly_p1_uf2/nrf52833", fileformat: "uf2", filename: "SlimeNRF_Butterfly_P1_Receiver"}, 
+                  {boardname: "dx_smart_bt33_uf2/nrf52833", fileformat: "uf2", filename: "SlimeNRF_Receiver_BT33"}, 
                 ]
     if: always()
     runs-on: ubuntu-latest
